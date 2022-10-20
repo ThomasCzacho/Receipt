@@ -19,6 +19,46 @@ public class Receipt {
 
         int i = 1, itemNumber = 1;
 
+        String item1Name = null;
+        double item1Price = 0.0;
+        int item1Quantity = 0;
+
+        String item2Name = null;
+        double item2Price = 0.0;
+        int item2Quantity = 0;
+
+        String item3Name = null;
+        double item3Price = 0.0;
+        int item3Quantity = 0;
+
+        String item4Name = null;
+        double item4Price = 0.0;
+        int item4Quantity = 0;
+
+        String item5Name = null;
+        double item5Price = 0.0;
+        int item5Quantity = 0;
+
+        String item6Name = null;
+        double item6Price = 0.0;
+        int item6Quantity = 0;
+
+        String item7Name = null;
+        double item7Price = 0.0;
+        int item7Quantity = 0;
+
+        String item8Name = null;
+        double item8Price = 0.0;
+        int item8Quantity = 0;
+
+        String item9Name = null;
+        double item9Price = 0.0;
+        int item9Quantity = 0;
+
+        String item10Name = null;
+        double item10Price = 0.0;
+        int item10Quantity = 0;
+
         Scanner sc = new Scanner(System.in);
 
         while (i == 1) {
