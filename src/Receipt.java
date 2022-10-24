@@ -19,9 +19,9 @@ public class Receipt {
 
         int i = 1, itemNumber = 1;
 
-        String item1Name = null;
-        double item1Price = 0.0;
-        int item1Quantity = 0;
+        String item1Name = "Goobles";
+        double item1Price = 19.98;
+        int item1Quantity = 7;
 
         String item2Name = null;
         double item2Price = 0.0;
@@ -69,6 +69,7 @@ public class Receipt {
                 case "Done", "done" -> {
                     i++;
                     System.out.println("finish");
+                    System.out.println(itemNumber-1);
                 }
                 default -> {
 
@@ -83,6 +84,88 @@ public class Receipt {
 
         }
         sc.close();
+        System.out.println("-- Thank You for Shopping! Your Receipt:\n");
+        switch (itemNumber-1) {
+            case 1:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+
+                break;
+            case 2:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                break;
+            case 3:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                break;
+            case 4:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item3Quantity*item4Price)+"\n");
+                break;
+            case 5:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item3Quantity*item4Price)+"\n");
+                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item3Quantity*item5Price)+"\n");
+
+                break;
+            case 6:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item3Quantity*item4Price)+"\n");
+                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item3Quantity*item5Price)+"\n");
+                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item3Quantity*item6Price)+"\n");
+                break;
+            case 7:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item3Quantity*item4Price)+"\n");
+                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item3Quantity*item5Price)+"\n");
+                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item3Quantity*item6Price)+"\n");
+                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item3Quantity*item7Price)+"\n");
+                break;
+            case 8:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item3Quantity*item4Price)+"\n");
+                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item3Quantity*item5Price)+"\n");
+                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item3Quantity*item6Price)+"\n");
+                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item3Quantity*item7Price)+"\n");
+                System.out.println("-- ("+item8Quantity+") "+item8Name+"-----subtotal: $"+(item3Quantity*item8Price)+"\n");
+                break;
+            case 9:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item3Quantity*item4Price)+"\n");
+                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item3Quantity*item5Price)+"\n");
+                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item3Quantity*item6Price)+"\n");
+                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item3Quantity*item7Price)+"\n");
+                System.out.println("-- ("+item8Quantity+") "+item8Name+"-----subtotal: $"+(item3Quantity*item8Price)+"\n");
+                System.out.println("-- ("+item9Quantity+") "+item9Name+"-----subtotal: $"+(item3Quantity*item9Price)+"\n");
+                break;
+            case 10:
+                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Quantity*item1Price)+"\n");
+                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Quantity*item2Price)+"\n");
+                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Quantity*item3Price)+"\n");
+                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item3Quantity*item4Price)+"\n");
+                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item3Quantity*item5Price)+"\n");
+                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item3Quantity*item6Price)+"\n");
+                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item3Quantity*item7Price)+"\n");
+                System.out.println("-- ("+item8Quantity+") "+item8Name+"-----subtotal: $"+(item3Quantity*item8Price)+"\n");
+                System.out.println("-- ("+item9Quantity+") "+item9Name+"-----subtotal: $"+(item3Quantity*item9Price)+"\n");
+                System.out.println("-- ("+item10Quantity+") "+item10Name+"-----subtotal: $"+(item3Quantity*item10Price)+"\n");
+                break;
+
+        }
+        System.out.println("\n Your Total is: ");
     }
 
 }
