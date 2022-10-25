@@ -78,10 +78,7 @@ public class Receipt {
             String currentItem = sc.next();
 
             switch (currentItem) {
-                case "Done", "done" -> {
-                    i++;
-
-                }
+                case "Done", "done" -> i++;
                 default -> {
 
 
@@ -95,59 +92,58 @@ public class Receipt {
                         i++;
                     }
 
-                    switch (itemNumber-1) {
-                case 1:
-                    item1Name=currentItem;
-                    item1Quantity=currentQty;
-                    item1Price=currentPrice;
-                    break;
-                case 2:
-                    item2Name=currentItem;
-                    item2Quantity=currentQty;
-                    item2Price=currentPrice;
-                    break;
-                case 3:
-                    item3Name=currentItem;
-                    item3Quantity=currentQty;
-                    item3Price=currentPrice;
-                    break;
-                case 4:
-                    item4Name=currentItem;
-                    item4Quantity=currentQty;
-                    item4Price=currentPrice;
-                    break;
-                case 5:
-                    item5Name=currentItem;
-                    item5Quantity=currentQty;
-                    item5Price=currentPrice;
-                    break;
-                case 6:
-                    item6Name=currentItem;
-                    item6Quantity=currentQty;
-                    item6Price=currentPrice;
-                    break;
-                case 7:
-                    item7Name=currentItem;
-                    item7Quantity=currentQty;
-                    item7Price=currentPrice;
-                    break;
-                case 8:
-                    item8Name=currentItem;
-                    item8Quantity=currentQty;
-                    item8Price=currentPrice;
-                    break;
-                case 9:
-                    item9Name=currentItem;
-                    item9Quantity=currentQty;
-                    item9Price=currentPrice;
-                    break;
-                case 10:
-                    item10Name=currentItem;
-                    item10Quantity=currentQty;
-                    item10Price=currentPrice;
-                    break;
-
-            }
+                    switch (itemNumber - 1) {
+                        case 1 -> {
+                            item1Name = currentItem;
+                            item1Quantity = currentQty;
+                            item1Price = currentPrice;
+                        }
+                        case 2 -> {
+                            item2Name = currentItem;
+                            item2Quantity = currentQty;
+                            item2Price = currentPrice;
+                        }
+                        case 3 -> {
+                            item3Name = currentItem;
+                            item3Quantity = currentQty;
+                            item3Price = currentPrice;
+                        }
+                        case 4 -> {
+                            item4Name = currentItem;
+                            item4Quantity = currentQty;
+                            item4Price = currentPrice;
+                        }
+                        case 5 -> {
+                            item5Name = currentItem;
+                            item5Quantity = currentQty;
+                            item5Price = currentPrice;
+                        }
+                        case 6 -> {
+                            item6Name = currentItem;
+                            item6Quantity = currentQty;
+                            item6Price = currentPrice;
+                        }
+                        case 7 -> {
+                            item7Name = currentItem;
+                            item7Quantity = currentQty;
+                            item7Price = currentPrice;
+                        }
+                        case 8 -> {
+                            item8Name = currentItem;
+                            item8Quantity = currentQty;
+                            item8Price = currentPrice;
+                        }
+                        case 9 -> {
+                            item9Name = currentItem;
+                            item9Quantity = currentQty;
+                            item9Price = currentPrice;
+                        }
+                        case 10 -> {
+                            item10Name = currentItem;
+                            item10Quantity = currentQty;
+                            item10Price = currentPrice;
+                        }
+                    }
         }
     }
 
@@ -195,104 +191,89 @@ public class Receipt {
         BigDecimal it10 = new BigDecimal(item10Total);
         BigDecimal item10Total2 = it10.setScale(2, java.math.RoundingMode.HALF_EVEN);
 
-        switch (itemNumber-1) {
-            case 1:
-
-
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-
-                break;
-            case 2:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                break;
-            case 3:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                break;
-            case 4:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item4Total2)+"\n--");
-                break;
-            case 5:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item4Total2)+"\n--");
-                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item5Total2)+"\n--");
-
-                break;
-            case 6:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item4Total2)+"\n--");
-                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item5Total2)+"\n--");
-                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item6Total2)+"\n--");
-                break;
-            case 7:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item4Total2)+"\n--");
-                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item5Total2)+"\n--");
-                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item6Total2)+"\n--");
-                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item7Total2)+"\n--");
-                break;
-            case 8:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item4Total2)+"\n--");
-                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item5Total2)+"\n--");
-                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item6Total2)+"\n--");
-                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item7Total2)+"\n--");
-                System.out.println("-- ("+item8Quantity+") "+item8Name+"-----subtotal: $"+(item8Total2)+"\n--");
-                break;
-            case 9:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item4Total2)+"\n--");
-                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item5Total2)+"\n--");
-                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item6Total2)+"\n--");
-                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item7Total2)+"\n--");
-                System.out.println("-- ("+item8Quantity+") "+item8Name+"-----subtotal: $"+(item8Total2)+"\n--");
-                System.out.println("-- ("+item9Quantity+") "+item9Name+"-----subtotal: $"+(item9Total2)+"\n--");
-                break;
-            case 10:
-                System.out.println("-- ("+item1Quantity+") "+item1Name+"-----subtotal: $"+(item1Total2)+"\n--");
-                System.out.println("-- ("+item2Quantity+") "+item2Name+"-----subtotal: $"+(item2Total2)+"\n--");
-                System.out.println("-- ("+item3Quantity+") "+item3Name+"-----subtotal: $"+(item3Total2)+"\n--");
-                System.out.println("-- ("+item4Quantity+") "+item4Name+"-----subtotal: $"+(item4Total2)+"\n--");
-                System.out.println("-- ("+item5Quantity+") "+item5Name+"-----subtotal: $"+(item5Total2)+"\n--");
-                System.out.println("-- ("+item6Quantity+") "+item6Name+"-----subtotal: $"+(item6Total2)+"\n--");
-                System.out.println("-- ("+item7Quantity+") "+item7Name+"-----subtotal: $"+(item7Total2)+"\n--");
-                System.out.println("-- ("+item8Quantity+") "+item8Name+"-----subtotal: $"+(item8Total2)+"\n--");
-                System.out.println("-- ("+item9Quantity+") "+item9Name+"-----subtotal: $"+(item9Total2)+"\n--");
-                System.out.println("-- ("+item10Quantity+") "+item10Name+"-----subtotal: $"+(item10Total2)+"\n--");
-                break;
-
+        switch (itemNumber - 1) {
+            case 1 -> System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+            case 2 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+            }
+            case 3 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+            }
+            case 4 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+                System.out.println("-- (" + item4Quantity + ") " + item4Name + "-----subtotal: $" + (item4Total2) + "\n--");
+            }
+            case 5 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+                System.out.println("-- (" + item4Quantity + ") " + item4Name + "-----subtotal: $" + (item4Total2) + "\n--");
+                System.out.println("-- (" + item5Quantity + ") " + item5Name + "-----subtotal: $" + (item5Total2) + "\n--");
+            }
+            case 6 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+                System.out.println("-- (" + item4Quantity + ") " + item4Name + "-----subtotal: $" + (item4Total2) + "\n--");
+                System.out.println("-- (" + item5Quantity + ") " + item5Name + "-----subtotal: $" + (item5Total2) + "\n--");
+                System.out.println("-- (" + item6Quantity + ") " + item6Name + "-----subtotal: $" + (item6Total2) + "\n--");
+            }
+            case 7 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+                System.out.println("-- (" + item4Quantity + ") " + item4Name + "-----subtotal: $" + (item4Total2) + "\n--");
+                System.out.println("-- (" + item5Quantity + ") " + item5Name + "-----subtotal: $" + (item5Total2) + "\n--");
+                System.out.println("-- (" + item6Quantity + ") " + item6Name + "-----subtotal: $" + (item6Total2) + "\n--");
+                System.out.println("-- (" + item7Quantity + ") " + item7Name + "-----subtotal: $" + (item7Total2) + "\n--");
+            }
+            case 8 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+                System.out.println("-- (" + item4Quantity + ") " + item4Name + "-----subtotal: $" + (item4Total2) + "\n--");
+                System.out.println("-- (" + item5Quantity + ") " + item5Name + "-----subtotal: $" + (item5Total2) + "\n--");
+                System.out.println("-- (" + item6Quantity + ") " + item6Name + "-----subtotal: $" + (item6Total2) + "\n--");
+                System.out.println("-- (" + item7Quantity + ") " + item7Name + "-----subtotal: $" + (item7Total2) + "\n--");
+                System.out.println("-- (" + item8Quantity + ") " + item8Name + "-----subtotal: $" + (item8Total2) + "\n--");
+            }
+            case 9 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+                System.out.println("-- (" + item4Quantity + ") " + item4Name + "-----subtotal: $" + (item4Total2) + "\n--");
+                System.out.println("-- (" + item5Quantity + ") " + item5Name + "-----subtotal: $" + (item5Total2) + "\n--");
+                System.out.println("-- (" + item6Quantity + ") " + item6Name + "-----subtotal: $" + (item6Total2) + "\n--");
+                System.out.println("-- (" + item7Quantity + ") " + item7Name + "-----subtotal: $" + (item7Total2) + "\n--");
+                System.out.println("-- (" + item8Quantity + ") " + item8Name + "-----subtotal: $" + (item8Total2) + "\n--");
+                System.out.println("-- (" + item9Quantity + ") " + item9Name + "-----subtotal: $" + (item9Total2) + "\n--");
+            }
+            case 10 -> {
+                System.out.println("-- (" + item1Quantity + ") " + item1Name + "-----subtotal: $" + (item1Total2) + "\n--");
+                System.out.println("-- (" + item2Quantity + ") " + item2Name + "-----subtotal: $" + (item2Total2) + "\n--");
+                System.out.println("-- (" + item3Quantity + ") " + item3Name + "-----subtotal: $" + (item3Total2) + "\n--");
+                System.out.println("-- (" + item4Quantity + ") " + item4Name + "-----subtotal: $" + (item4Total2) + "\n--");
+                System.out.println("-- (" + item5Quantity + ") " + item5Name + "-----subtotal: $" + (item5Total2) + "\n--");
+                System.out.println("-- (" + item6Quantity + ") " + item6Name + "-----subtotal: $" + (item6Total2) + "\n--");
+                System.out.println("-- (" + item7Quantity + ") " + item7Name + "-----subtotal: $" + (item7Total2) + "\n--");
+                System.out.println("-- (" + item8Quantity + ") " + item8Name + "-----subtotal: $" + (item8Total2) + "\n--");
+                System.out.println("-- (" + item9Quantity + ") " + item9Name + "-----subtotal: $" + (item9Total2) + "\n--");
+                System.out.println("-- (" + item10Quantity + ") " + item10Name + "-----subtotal: $" + (item10Total2) + "\n--");
+            }
         }
-//        double total = ((item1Price*item1Quantity)+(item2Price*item2Quantity)+(item3Price*item3Quantity)
-//                +(item4Price*item4Quantity)+(item5Price*item5Quantity)+(item6Price*item6Quantity)+
-//                (item7Price*item7Quantity)+(item8Price*item8Quantity)+(item9Price*item9Quantity)+
-//                (item10Price*item10Quantity));
 
-        double total = 0;
-        BigDecimal total2 = new BigDecimal(total);
-
-//        total = (item2Total2 + item1Total2 + item3Total2 + item4Total2 + item5Total2 + item6Total2 + item7Total2 + item8Total2 + item9Total2 + item10Total2);
-total2=item1Total2.add(item2Total2).add(item3Total2).add(item4Total2).add(item5Total2).add(item6Total2).add(item7Total2).add(item8Total2).add(item9Total2).add(item10Total2);
+BigDecimal total2=item1Total2.add(item2Total2).add(item3Total2).add(item4Total2).add(item5Total2).add(item6Total2).add(item7Total2).add(item8Total2).add(item9Total2).add(item10Total2);
 
 
         BigDecimal totalTax = (total2.multiply(taxRate2));
-        BigDecimal totalTip = (total2.multiply(tipRate2));
-
         BigDecimal totalTax2 = totalTax.setScale(2, java.math.RoundingMode.HALF_EVEN);
+
+        BigDecimal totalTip = (total2.multiply(tipRate2));
         BigDecimal totalTip2 = totalTip.setScale(2, java.math.RoundingMode.HALF_EVEN);
 
         total2 = (total2.add(totalTax).add(totalTip));
