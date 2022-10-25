@@ -21,6 +21,10 @@ public class Receipt {
         double taxRate = 0.05;
         double tipRate = 0.15;
 
+        BigDecimal taxRate2 = new BigDecimal(taxRate);
+        BigDecimal tipRate2 = new BigDecimal(tipRate);
+
+
         int i = 1, itemNumber = 1;
 
         String item1Name = null;
@@ -285,13 +289,19 @@ public class Receipt {
 total2=item1Total2.add(item2Total2).add(item3Total2).add(item4Total2).add(item5Total2).add(item6Total2).add(item7Total2).add(item8Total2).add(item9Total2).add(item10Total2);
 
 
-        double totalTax = (total*taxRate);
-        double totalTip = (total*tipRate);
+        BigDecimal totalTax = (total2.multiply(taxRate2));
+        BigDecimal totalTip = (total2.multiply(tipRate2));
+
+        BigDecimal totalTax2 = totalTax.setScale(2, java.math.RoundingMode.HALF_EVEN);
+        BigDecimal totalTip2 = totalTip.setScale(2, java.math.RoundingMode.HALF_EVEN);
+
+        total2 = (total2.add(totalTax).add(totalTip));
+        BigDecimal totalTotal = total2.setScale(2, java.math.RoundingMode.HALF_EVEN);
 
         System.out.println("-- Your Total is: $"+total2+"\n--");
-        System.out.println("-- "+taxRate+" tax : $"+totalTax+"\n--");
-        System.out.println("-- "+tipRate+" tip : $"+totalTip+"\n--");
-        System.out.println("-- Your Final Total is: $"+(total+totalTax+totalTip));
+        System.out.println("-- "+taxRate+" tax : $"+totalTax2+"\n--");
+        System.out.println("-- "+tipRate+" tip : $"+totalTip2+"\n--");
+        System.out.println("-- Your Final Total is: $"+(totalTotal));
     }
 
 }
