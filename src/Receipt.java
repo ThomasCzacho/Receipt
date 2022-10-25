@@ -273,15 +273,22 @@ public class Receipt {
                 break;
 
         }
-        double total = ((item1Price*item1Quantity)+(item2Price*item2Quantity)+(item3Price*item3Quantity)
-                +(item4Price*item4Quantity)+(item5Price*item5Quantity)+(item6Price*item6Quantity)+
-                (item7Price*item7Quantity)+(item8Price*item8Quantity)+(item9Price*item9Quantity)+
-                (item10Price*item10Quantity));
+//        double total = ((item1Price*item1Quantity)+(item2Price*item2Quantity)+(item3Price*item3Quantity)
+//                +(item4Price*item4Quantity)+(item5Price*item5Quantity)+(item6Price*item6Quantity)+
+//                (item7Price*item7Quantity)+(item8Price*item8Quantity)+(item9Price*item9Quantity)+
+//                (item10Price*item10Quantity));
+
+        double total = 0;
+        BigDecimal total2 = new BigDecimal(total);
+
+//        total = (item2Total2 + item1Total2 + item3Total2 + item4Total2 + item5Total2 + item6Total2 + item7Total2 + item8Total2 + item9Total2 + item10Total2);
+total2=item1Total2.add(item2Total2).add(item3Total2).add(item4Total2).add(item5Total2).add(item6Total2).add(item7Total2).add(item8Total2).add(item9Total2).add(item10Total2);
+
 
         double totalTax = (total*taxRate);
         double totalTip = (total*tipRate);
 
-        System.out.println("-- Your Total is: $"+total+"\n--");
+        System.out.println("-- Your Total is: $"+total2+"\n--");
         System.out.println("-- "+taxRate+" tax : $"+totalTax+"\n--");
         System.out.println("-- "+tipRate+" tip : $"+totalTip+"\n--");
         System.out.println("-- Your Final Total is: $"+(total+totalTax+totalTip));
