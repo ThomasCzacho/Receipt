@@ -10,6 +10,7 @@ TOTAL BEFORE TAX,  done
 TOTAL WITH TAX  done
 program stops
  */
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Receipt {
@@ -63,7 +64,11 @@ public class Receipt {
 
         Scanner sc = new Scanner(System.in);
 
+
+
+        System.out.println("\nFill out your order. Order can be up to 10 unique items\n");
         while (i == 1) {
+
             System.out.println("Enter Name of Item " + itemNumber + ". Enter \"Done\" to see your Receipt.");
             String currentItem = sc.next();
 
@@ -81,7 +86,11 @@ public class Receipt {
             int currentQty = sc.nextInt();
             itemNumber++;
 
-            switch (itemNumber-1) {
+                    if (itemNumber==11){
+                        i++;
+                    }
+
+                    switch (itemNumber-1) {
                 case 1:
                     item1Name=currentItem;
                     item1Quantity=currentQty;
@@ -136,6 +145,13 @@ public class Receipt {
             }
         }
     }
+
+            float number = 123.456f;
+
+            BigDecimal bd = new BigDecimal(number);
+            BigDecimal roundedOffBd = bd.setScale(2, java.math.RoundingMode.HALF_EVEN);
+
+            System.out.println(roundedOffBd);
 
         }
         sc.close();
